@@ -11,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -20,7 +20,19 @@
 				"command": "wxformat-extension.helloWorld",
 				"title": "Hello World"
 			}
-		]
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "wxx-format",
+					"title": "WXFT",
+					"icon": "./wx-format/icon.svg"
+				}
+			]
+		},
+		"views": {
+			"wxx-format": []
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run package",
